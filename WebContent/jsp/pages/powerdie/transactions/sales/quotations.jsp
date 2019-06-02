@@ -246,8 +246,8 @@
 					 						<th width="10%" class="text-center sml_input">QTN NUMBER</th>
                       						<th width="10%" class="text-center sml_input">QTN DATE</th>
                       						<th width="10%" class="text-center sml_input">CUSTOMER</th>
-					  						<th width="10%" class="text-center sml_input">STAFF NAME</th>
-					  						<th width="10%" class="text-center sml_input"> QTN AMT</th>
+<!-- 					  						<th width="10%" class="text-center sml_input">STAFF NAME</th>
+ -->					  						<th width="10%" class="text-center sml_input"> QTN AMT</th>
 					   						<th width="10%" class="text-center sml_input">PRODUCT</th>
 					   						<th width="10%" class="text-center sml_input">GST %</th>
 					    					<th width="10%" class="text-center sml_input">UNIT PRICE</th>

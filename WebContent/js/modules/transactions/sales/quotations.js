@@ -83,24 +83,28 @@ if(page_data.length>0) {
 	for(var z=page_data.length-1; z>=0; z--){
 		var ed = new Date(page_data[z].qtn_date);
 		var custName = getCustomerName(cvo_data,page_data[z].customer_id);
-		var staffName = getStaffName(staff_data,page_data[z].staff_id);
+		/*var staffName = getStaffName(staff_data,page_data[z].staff_id);
 		if(!staffName){			
 			staffName = "NA";		
-		}
+		}*/
 		var qlistLen = page_data[z].quotationItemsList.length;
 		for(var i=page_data[z].quotationItemsList.length-1; i>=0; i--){
 			var spd = "";
 			var prodId = page_data[z].quotationItemsList[i].prod_code;
 			if(prodId < 100) {
-				spd = fetchProductDetails(prod_types, page_data[z].quotationItemsList[i].prod_code);
+				spd = fetchProductDetails(cat_prod_types_data, page_data[z].quotationItemsList[i].prod_code);
 			} else {
 				spd = fetchARBProductDetails(cat_arb_types_data, page_data[z].quotationItemsList[i].prod_code);
 			}
 			//if(i==0) {
+			//rowpdhtml = rowpdhtml + "<tr><td><a href='javascript:showInvoice("+page_data[z].id+","+page_data[z].qtn_date+")'>"+page_data[z].sr_no+"</a></td>";
+			//rowpdhtml = rowpdhtml + "<tr><td>"+page_data[z].qtn_date+"</td>";
 			rowpdhtml = rowpdhtml + "<tr><td><a href='javascript:showInvoice("+page_data[z].id+","+page_data[z].qtn_date+")'>"+page_data[z].sr_no+"</a></td>";
+
+
 			rowpdhtml = rowpdhtml + "<td>"+ed.getDate()+"-"+months[ed.getMonth()]+"-"+ed.getFullYear()+"</td>";
 			rowpdhtml = rowpdhtml + "<td>"+custName+"</td>";
-			rowpdhtml = rowpdhtml + "<td>"+staffName+"</td>";
+			//rowpdhtml = rowpdhtml + "<td>"+staffName+"</td>";
 			rowpdhtml = rowpdhtml + "<td>"+page_data[z].qtn_amount+"</td>";
 
 				rowpdhtml = rowpdhtml + "<td>"+spd+"</td>"+
@@ -473,7 +477,7 @@ function fetchPriceAndVAT(){
 							if(cproduct == pide.options[pide.selectedIndex].innerHTML) {
 								if(dsdate != ""){
 								if(prodid == product_prices_data[i].prod_code) {
-									if(!(product_prices_data[i].montha == mon && pyear[product_prices_data[i].yeara] == yr)){
+									if(!(product_prices_data[i].month == mon && pyear[product_prices_data[i].year] == yr)){
 										document.getElementById("dialog-1").innerHTML = "please define the price of product for sale invoice month in price master and continue";
 										alertdialogue();
 										//alert("please define the price of product for sale invoice month in price master and continue");

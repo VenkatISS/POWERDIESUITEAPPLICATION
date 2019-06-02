@@ -31,7 +31,7 @@ public class TransactionsDataFactory {
 			List<QuotationDetailsDO> doList = new ArrayList<>();
 			String[] qtnDate = requestParams.get("qtn_date");
 			String[] custId = requestParams.get("cust_id");
-			String[] staffId = requestParams.get("staff_id");
+			//String[] staffId = requestParams.get("staff_id");
 			String[] qtnAmount = requestParams.get("qtn_c_amt");
 			//Items
 			String[] epids = requestParams.get("epid");
@@ -52,7 +52,7 @@ public class TransactionsDataFactory {
 			}
 			
 			getTransactionsPersistenceManager().saveAgencyQuotations(qbo.createDO(qtnDate[0], Long.parseLong(custId[0]), 
-					Long.parseLong(staffId[0]), qtnAmount[0], fns[0], agencyId),
+					qtnAmount[0], fns[0], agencyId),
 					doList);
 			return getTransactionsPersistenceManager().getAgencyQuotations(agencyId);
 		}

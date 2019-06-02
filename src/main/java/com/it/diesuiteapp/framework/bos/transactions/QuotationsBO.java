@@ -9,14 +9,14 @@ import com.it.diesuiteapp.systemservices.exceptions.BusinessException;
 
 public class QuotationsBO {
 
-	public QuotationsDO createDO(String qtnDate, long custId, long staffId, 
+	public QuotationsDO createDO(String qtnDate, long custId, 
 			String qtnAmount, String footNotes, long agencyId) throws BusinessException {
 		QuotationsDO doObj = new QuotationsDO();
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			doObj.setQtn_date(sdf.parse(qtnDate).getTime());
 			doObj.setCustomer_id(custId);
-			doObj.setStaff_id(staffId);
+			//doObj.setStaff_id(staffId);
 			doObj.setQtn_amount(qtnAmount);
 			doObj.setCreated_by(agencyId);
 			doObj.setCreated_date(System.currentTimeMillis());

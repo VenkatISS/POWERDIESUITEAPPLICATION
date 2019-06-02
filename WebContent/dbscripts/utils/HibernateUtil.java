@@ -1,6 +1,5 @@
 package com.it.diesuiteapp.utils;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +14,6 @@ import com.it.diesuiteapp.framework.model.AdminCVOBalanceDataDO;
 import com.it.diesuiteapp.framework.model.AdminDO;
 import com.it.diesuiteapp.framework.model.AdminDetailsDO;
 import com.it.diesuiteapp.framework.model.AdminStockDataDO;
-import com.it.diesuiteapp.framework.model.AgencySerialNosDO;
 import com.it.diesuiteapp.framework.model.BankDataDO;
 import com.it.diesuiteapp.framework.model.CVODataDO;
 import com.it.diesuiteapp.framework.model.FleetDataDO;
@@ -23,7 +21,6 @@ import com.it.diesuiteapp.framework.model.ProductCategoryDO;
 import com.it.diesuiteapp.framework.model.ProductDataDO;
 import com.it.diesuiteapp.framework.model.ProductPriceDataDO;
 import com.it.diesuiteapp.framework.model.UserDetailsDO;
-import com.it.diesuiteapp.framework.model.transactions.sales.QuotationDetailsDO;
 import com.it.diesuiteapp.framework.model.transactions.sales.QuotationsDO;
 import com.it.diesuiteapp.framework.model.vos.AgencyVO;
 
@@ -79,11 +76,7 @@ public class HibernateUtil {
 								.addAnnotatedClass(ProductPriceDataDO.class)
 								.addAnnotatedClass(QuotationsDO.class)
 								.addAnnotatedClass(AgencyVO.class)
-								.addAnnotatedClass(AgencySerialNosDO.class)
-								.addAnnotatedClass(QuotationDetailsDO.class)
 
-								
-								
 								
 								;
 
